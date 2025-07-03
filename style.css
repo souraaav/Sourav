@@ -125,9 +125,3 @@ header {
   /* ... */
   padding: 1em 2em;
 }
-footer p {
-  font-size: 0.85em;         /* Makes the text smaller */
-  color: #e0e0e0;            /* Makes the text fainter (lighter grey) */
-  opacity: 0.7;              /* Further reduces intensity for a faded look */
-  margin: 0;
-}
