@@ -1,83 +1,87 @@
-/* Reset & Base Styles */
-html, body {
+/* RESET AND BASE */
+*,
+*::before,
+*::after {
   box-sizing: border-box;
-  height: 100%;
-  width: 100%;
+}
+html, body {
   margin: 0;
   padding: 0;
+  height: 100%;
+  width: 100%;
   font-family: 'Segoe UI', Arial, sans-serif;
   font-size: 1rem;
   line-height: 1.6;
 }
 
-*, *::before, *::after {
-  box-sizing: inherit;
-}
-
-/* Theme Variables */
+/* THEME VARIABLES */
 :root {
   --bg: #f9f9f9;
   --text: #111;
   --primary: #0077ff;
   --header-bg: var(--primary);
-  --header-text: #fff;
-  --footer-bg: #222;
+  --header-text: #ffffff;
+  --footer-bg: #222222;
   --footer-text: #e0e0e0;
-  --transition: 0.3s;
+  --paragraph-bg: #f0f0f0;
+  --transition: 0.3s ease;
 }
 
 body.dark-mode {
-  --bg: #111;
+  --bg: #111111;
   --text: #f9f9f9;
-  --header-bg: #222;
+  --header-bg: #1a1a1a;
   --header-text: #f9f9f9;
-  --footer-bg: #111;
-  --footer-text: #aaa;
+  --footer-bg: #0d0d0d;
+  --footer-text: #cccccc;
+  --paragraph-bg: #1f1f1f;
 }
 
-/* Body Layout */
+/* BODY */
 body {
   min-height: 100vh;
+  background-color: var(--bg);
+  color: var(--text);
   display: flex;
   flex-direction: column;
-  background: var(--bg);
-  color: var(--text);
-  transition: background var(--transition), color var(--transition);
+  transition: background-color var(--transition), color var(--transition);
 }
 
-/* Header */
+/* HEADER */
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 2em 1.5em;
-  background: var(--header-bg);
+  background-color: var(--header-bg);
   color: var(--header-text);
   width: 100%;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
 }
 
 .logo h1 {
   margin: 0;
 }
 
-/* Navigation */
-nav a, #toggle-theme {
+/* NAVIGATION */
+nav a,
+#toggle-theme {
   margin-left: 1em;
   color: var(--header-text);
   text-decoration: none;
   background: none;
   border: none;
   font-weight: 500;
-  cursor: pointer;
   font-size: 1em;
+  cursor: pointer;
   transition: color var(--transition);
 }
-nav a:hover, #toggle-theme:hover {
+nav a:hover,
+#toggle-theme:hover {
   text-decoration: underline;
 }
 
-/* Blue Line */
+/* BLUE LINE UNDER HEADER */
 .blue-line {
   width: 100%;
   height: 4px;
@@ -85,33 +89,34 @@ nav a:hover, #toggle-theme:hover {
   margin-bottom: 1em;
 }
 
-/* Sections */
+/* MAIN SECTIONS */
 section {
-  padding: 2em 2em;
+  padding: 2em 1.5em;
   max-width: 960px;
   margin: 0 auto;
 }
 
+/* SECTION HEADINGS */
 section h2 {
   font-size: 1.6em;
   text-align: left;
   margin-bottom: 1em;
-  padding-left: 0.5em;
+  padding-left: 0.3em;
 }
 
-/* Paragraphs */
+/* PARAGRAPHS */
 section p {
-  font-size: 1.1rem;
-  line-height: 1.7;
+  background-color: var(--paragraph-bg);
   color: var(--text);
-  background: #f0f0f0;
+  font-size: 1.1rem;
   padding: 1em 1.5em;
   margin-bottom: 1.5em;
   border-radius: 10px;
   text-align: left;
+  transition: background-color var(--transition), color var(--transition);
 }
 
-/* Social Icons */
+/* SOCIAL ICONS */
 .socials {
   display: flex;
   justify-content: center;
@@ -129,18 +134,18 @@ section p {
   height: 40px;
 }
 
-/* Footer */
+/* FOOTER */
 footer {
-  background: var(--footer-bg);
+  background-color: var(--footer-bg);
   color: var(--footer-text);
   text-align: center;
   padding: 1em 0;
   font-size: 0.85em;
   margin-top: auto;
-  transition: background var(--transition), color var(--transition);
+  transition: background-color var(--transition), color var(--transition);
 }
 
-/* Contact Form (if added) */
+/* CONTACT FORM (OPTIONAL) */
 form {
   max-width: 400px;
   margin: 0 auto;
@@ -148,23 +153,32 @@ form {
   flex-direction: column;
   gap: 1em;
 }
-form input, form textarea, form button {
+form input,
+form textarea,
+form button {
   font: inherit;
   padding: 0.75em;
   border: 1px solid #ccc;
   border-radius: 5px;
 }
+form input:focus,
+form textarea:focus {
+  border-color: var(--primary);
+  outline: none;
+}
 form button {
-  background: var(--primary);
+  background-color: var(--primary);
   color: white;
   font-weight: 600;
   cursor: pointer;
+  border: none;
+  transition: background-color var(--transition);
 }
 form button:hover {
-  background: #005bb5;
+  background-color: #005bb5;
 }
 
-/* Responsive Design */
+/* RESPONSIVE DESIGN */
 @media (max-width: 700px) {
   header {
     flex-direction: column;
@@ -176,11 +190,11 @@ form button:hover {
   }
 
   section {
-    padding: 1.5em 1.2em;
+    padding: 1.5em 1em;
   }
 
   section h2 {
-    padding-left: 0.3em;
+    padding-left: 0.2em;
   }
 
   section p {
