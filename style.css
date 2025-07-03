@@ -52,11 +52,7 @@ form {
   max-width: 400px;
 }
 
-form input, form textarea, form button {
-  margin-bottom: 1em;
-  padding: 0.8em;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+
 }
 
 footer {
