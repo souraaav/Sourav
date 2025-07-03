@@ -1,3 +1,5 @@
+
+  /* Reset and global box-sizing */
 html, body {
   height: 100%;
   width: 100%;
@@ -5,31 +7,11 @@ html, body {
   padding: 0;
   box-sizing: border-box;
 }
-
-body {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  margin: 0;
-  padding: 0;
-}
-header {
-  margin: 0;
-}
-footer {
-  margin: 0;
-}/* Reset and global box-sizing */
 *, *::before, *::after {
-  box-sizing: border-box;
+  box-sizing: inherit;
 }
 
-html, body {
-  height: 100%;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-}
-
+/* CSS Variables for themes */
 :root {
   --bg: #f9f9f9;
   --text: #111;
@@ -40,7 +22,6 @@ html, body {
   --footer-text: #e0e0e0;
   --transition: 0.3s;
 }
-
 body.dark-mode {
   --bg: #111;
   --text: #f9f9f9;
@@ -50,33 +31,41 @@ body.dark-mode {
   --footer-text: #aaa;
 }
 
+/* Body Layout */
 body {
+  min-height: 100vh;
   margin: 0;
-  padding: 3em 0;
+  padding: 0;
   font-family: 'Segoe UI', Arial, sans-serif;
   font-size: 1rem;
   line-height: 1.6;
   background: var(--bg);
   color: var(--text);
   transition: background var(--transition), color var(--transition);
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
+/* Header (Blue Box) */
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1em 2em;
+  padding: 3em 0; /* Make header TALL and touch left/right */
   background: var(--header-bg);
   color: var(--header-text);
-  width: 100%;
+  width: 100vw; /* Force edge-to-edge */
   box-sizing: border-box;
   transition: background var(--transition), color var(--transition);
   box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+  margin: 0;
+}
+.logo h1 {
+  margin: 0;
+  padding: 0 1em;
 }
 
+/* Navigation */
 nav a, #toggle-theme {
   margin-left: 1em;
   color: var(--header-text);
@@ -96,17 +85,20 @@ nav a:focus, #toggle-theme:focus, form button:focus {
   outline-offset: 2px;
 }
 
+/* Blue line under header */
 .blue-line {
-  width: 100%;
+  width: 100vw;
   height: 4px;
   background: var(--primary);
   margin-bottom: 1em;
 }
 
+/* Section spacing */
 section {
   padding: 2em 0;
 }
 
+/* Gallery */
 .gallery {
   display: flex;
   flex-wrap: wrap;
@@ -122,6 +114,7 @@ section {
   transition: box-shadow var(--transition);
 }
 
+/* Contact Form */
 form {
   display: flex;
   flex-direction: column;
@@ -151,8 +144,9 @@ form button:hover {
   background: #005bb5;
 }
 
+/* Footer */
 footer {
-  margin-top: auto;
+  margin: 0;
   background: var(--footer-bg);
   padding: 1em 0;
   color: var(--footer-text);
@@ -161,6 +155,7 @@ footer {
   transition: background var(--transition), color var(--transition);
 }
 
+/* Social Icons */
 .socials {
   display: flex;
   justify-content: center;
@@ -186,7 +181,7 @@ footer {
   header {
     flex-direction: column;
     align-items: flex-start;
-    padding: 1em;
+    padding: 2em 0.5em;
   }
   .gallery {
     flex-direction: column;
@@ -196,7 +191,6 @@ footer {
     padding: 1em 0;
   }
 }
-
 @media (max-width: 400px) {
   header {
     font-size: 0.95em;
