@@ -42,7 +42,7 @@ header {
   width: 200%;
   height: 4px;
   background: var(--primary);
-  margin-bottom: 1em;
+  margin-bottom: 2em;
 }
 nav a, #toggle-theme {
   margin-left: 1em;
