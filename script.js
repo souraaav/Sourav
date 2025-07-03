@@ -1,22 +1,18 @@
-document.getElementById('toggle-theme').addEventListener('click', () => {
-  document.body.classList.toggle('dark-mode');
-});
-// (Other code you may have above)
+// theme-toggle.js
+document.addEventListener("DOMContentLoaded", function() {
+  const btn = document.getElementById('toggle-theme');
+  // Load theme from localStorage
+  if (localStorage.getItem('theme') === 'dark') {
+    document.body.classList.add('dark-mode');
+    btn.textContent = "🌙 Dark Mode";
+  } else {
+    btn.textContent = "☀️ Light Mode";
+  }
 
-// Add your form submission code here
-document.getElementById('contactForm').addEventListener('submit', async function(e){
-  e.preventDefault();
-  const data = {
-    name: this.name.value,
-    email: this.email.value,
-    message: this.message.value
-  };
-  const response = await fetch('http://localhost:3000/send', {
-    method: 'POST',
-    headers: {'Content-Type': 'application/json'},
-    body: JSON.stringify(data)
+  btn.addEventListener('click', function() {
+    document.body.classList.toggle('dark-mode');
+    const isDark = document.body.classList.contains('dark-mode');
+    btn.textContent = isDark ? "🌙 Dark Mode" : "☀️ Light Mode";
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
   });
-  const result = await response.json();
-  if(result.success) alert('Message sent!');
-  else alert('Error: ' + result.error);
 });
