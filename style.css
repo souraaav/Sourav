@@ -46,13 +46,10 @@ body {
   display: flex;
   flex-direction: column;
 }
-p {
-  margin-left: 20px;
-  margin-right: 20px;
-  /* or use padding */
-  padding-left: 20px;
-  padding-right: 20px;
+.about-me-paragraph, .contact-section {
+    margin-left: 20px; /* Adjust this value as needed */
 }
+
 /* Header (Blue Box) */
 header {
   display: flex;
