@@ -1,4 +1,4 @@
-/* Reset & Base */
+/* Reset & Base Styles */
 html, body {
   box-sizing: border-box;
   height: 100%;
@@ -35,7 +35,7 @@ body.dark-mode {
   --footer-text: #aaa;
 }
 
-/* Layout */
+/* Body Layout */
 body {
   min-height: 100vh;
   display: flex;
@@ -87,7 +87,7 @@ nav a:hover, #toggle-theme:hover {
 
 /* Sections */
 section {
-  padding: 2em 1.5em;
+  padding: 2em 2em;
   max-width: 960px;
   margin: 0 auto;
 }
@@ -96,6 +96,7 @@ section h2 {
   font-size: 1.6em;
   text-align: left;
   margin-bottom: 1em;
+  padding-left: 0.5em;
 }
 
 /* Paragraphs */
@@ -104,7 +105,7 @@ section p {
   line-height: 1.7;
   color: var(--text);
   background: #f0f0f0;
-  padding: 1em;
+  padding: 1em 1.5em;
   margin-bottom: 1.5em;
   border-radius: 10px;
   text-align: left;
@@ -139,7 +140,7 @@ footer {
   transition: background var(--transition), color var(--transition);
 }
 
-/* Contact Form (if used) */
+/* Contact Form (if added) */
 form {
   max-width: 400px;
   margin: 0 auto;
@@ -175,11 +176,16 @@ form button:hover {
   }
 
   section {
-    padding: 1.5em 1em;
+    padding: 1.5em 1.2em;
+  }
+
+  section h2 {
+    padding-left: 0.3em;
   }
 
   section p {
     font-size: 1rem;
+    padding: 0.9em 1.2em;
   }
 }
 
