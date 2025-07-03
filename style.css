@@ -104,3 +104,6 @@ footer {
   height: 50px;
   display: block;
 }
+section {
+  padding: 2em;
+}
