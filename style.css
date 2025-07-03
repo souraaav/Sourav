@@ -44,7 +44,7 @@ body {
   color: var(--text);
   transition: background var(--transition), color var(--transition);
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 }
 
 
