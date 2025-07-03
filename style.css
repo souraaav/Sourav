@@ -46,14 +46,13 @@ body {
   display: flex;
   flex-direction: column;
 }
-main {
-  max-width: 900px;        /* Or 800px, adjust as you like */
-  margin: 0 auto;          /* Horizontally center the block */
-  padding: 0 2em;          /* Adds space on left and right */
-  width: 100%;             /* Ensures responsiveness */
-  box-sizing: border-box;  /* Keeps padding inside the width */
+p {
+  margin-left: 20px;
+  margin-right: 20px;
+  /* or use padding */
+  padding-left: 20px;
+  padding-right: 20px;
 }
-
 /* Header (Blue Box) */
 header {
   display: flex;
