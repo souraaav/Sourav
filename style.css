@@ -1,14 +1,16 @@
-.container {  /* or your main wrapper class/id */
-  width: 100vw;
-  height: 100vh;
-}html, body {
+/* Reset and global box-sizing */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
   height: 100%;
   width: 100%;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
-  :root {
+
+:root {
   --bg: #f9f9f9;
   --text: #111;
   --primary: #0077ff;
@@ -19,7 +21,6 @@
   --transition: 0.3s;
 }
 
-/* Dark mode overrides */
 body.dark-mode {
   --bg: #111;
   --text: #f9f9f9;
@@ -33,6 +34,8 @@ body {
   margin: 0;
   padding: 0 16px;
   font-family: 'Segoe UI', Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
   background: var(--bg);
   color: var(--text);
   transition: background var(--transition), color var(--transition);
@@ -51,6 +54,7 @@ header {
   width: 100%;
   box-sizing: border-box;
   transition: background var(--transition), color var(--transition);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.02);
 }
 
 nav a, #toggle-theme {
@@ -64,9 +68,12 @@ nav a, #toggle-theme {
   font-size: 1em;
   transition: color var(--transition);
 }
-
 nav a:hover, #toggle-theme:hover {
   text-decoration: underline;
+}
+nav a:focus, #toggle-theme:focus, form button:focus {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
 }
 
 .blue-line {
@@ -86,7 +93,6 @@ section {
   gap: 2em;
   justify-content: center;
 }
-
 .gallery .item img {
   width: 100%;
   max-width: 300px;
@@ -101,6 +107,28 @@ form {
   flex-direction: column;
   max-width: 400px;
   gap: 1em;
+}
+form input, form textarea, form button {
+  font: inherit;
+  padding: 0.75em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: border-color 0.2s;
+}
+form input:focus, form textarea:focus {
+  border-color: var(--primary);
+  outline: none;
+}
+form button {
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background var(--transition);
+}
+form button:hover {
+  background: #005bb5;
 }
 
 footer {
@@ -120,16 +148,13 @@ footer {
   gap: 2em;
   margin: 2em 0;
 }
-
 .socials a {
   display: inline-block;
   transition: transform 0.2s;
 }
-
 .socials a:hover {
   transform: scale(1.1) rotate(-5deg);
 }
-
 .social-icon img {
   width: 40px;
   height: 40px;
