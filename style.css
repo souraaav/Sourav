@@ -1,4 +1,13 @@
-
+.container {  /* or your main wrapper class/id */
+  width: 100vw;
+  height: 100vh;
+}html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
   :root {
   --bg: #f9f9f9;
   --text: #111;
