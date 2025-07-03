@@ -46,9 +46,9 @@ body {
   display: flex;
   flex-direction: column;
 }
-p {
-  margin-left: 20px;
-  margin-right: 20px;
+body {
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 /* Header (Blue Box) */
