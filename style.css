@@ -13,6 +13,14 @@ body {
   color: var(--text);
   transition: all 0.3s;
 }
+body {
+  margin: 0;
+  padding: 0 16px; /* Add left and right padding */
+  font-family: 'Segoe UI', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  transition: all 0.3s;
+}
 
 header {
   display: flex;
