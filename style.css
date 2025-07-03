@@ -74,19 +74,19 @@ form {
 }
 
 
-}
+
 
 footer p {
-  font-size: 0.75em;        
+  font-size: 0.80em;        
   color: #e0e0e0;          
   opacity: 0.6;            
   text-align: center;       
   margin: 0;
   padding: 1em 0;
-}
+  size:0.5px
 }
 
-}
+
 body {
   min-height: 100vh;
   display: flex;
