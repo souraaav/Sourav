@@ -1,4 +1,24 @@
-/* Reset and global box-sizing */
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
+header {
+  margin: 0;
+}
+footer {
+  margin: 0;
+}/* Reset and global box-sizing */
 *, *::before, *::after {
   box-sizing: border-box;
 }
