@@ -82,11 +82,12 @@ form {
 
 }
 
-footer {
-  text-align: center;
-  padding: 1em;
-  background: var(--primary);
-  color: white;
+footer p {
+  font-size: 0.85em;        
+  color: #e0e0e0;            
+  opacity: 0.7;             
+  margin: 0;
+
 }
 body {
   min-height: 100vh;
