@@ -46,7 +46,10 @@ body {
   display: flex;
   flex-direction: column;
 }
-
+.about-me-paragraph {
+  margin-left: 20px;
+  margin-right: 20px;
+}
 
 /* Header (Blue Box) */
 header {
