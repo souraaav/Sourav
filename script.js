@@ -1,11 +1,13 @@
 // theme-toggle.js
 document.addEventListener("DOMContentLoaded", function() {
   const btn = document.getElementById('toggle-theme');
-  // Load theme from localStorage
+
+  // Detect & apply saved theme from localStorage
   if (localStorage.getItem('theme') === 'dark') {
     document.body.classList.add('dark-mode');
     btn.textContent = "🌙 Dark Mode";
   } else {
+    document.body.classList.remove('dark-mode');
     btn.textContent = "☀️ Light Mode";
   }
 
