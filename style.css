@@ -29,8 +29,27 @@ header {
   padding: 1em 2em;
   background: var(--primary);
   color: white;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  box-sizing: border-box;
 }
 
+.blue-line {
+  position: relative;
+  left: 50%;
+  right: 50%;
+  width: 100vw;
+  max-width: 100vw;
+  height: 4px;
+  background: #0077ff;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  margin-bottom: 1em;
+}
 nav a, #toggle-theme {
   margin-left: 1em;
   color: white;
@@ -77,12 +96,6 @@ body {
 footer {
   margin-top: auto;
 }
-.blue-line {
-     width: 100%;
-     height: 1px;
-     background: #0077ff;
-     margin-bottom: 1em;
-   }
 
 .dark-mode {
   --bg: #111;
