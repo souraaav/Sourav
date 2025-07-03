@@ -39,7 +39,7 @@ header {
 }
 
 .blue-line {
-  width: 200%;
+  width: 100%;
   height: 4px;
   background: var(--primary);
   margin-bottom: 1em;
