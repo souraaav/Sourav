@@ -46,9 +46,15 @@ body {
   display: flex;
   flex-direction: column;
 }
-.about-me-paragraph {
-  margin-left: 20px;
-  margin-right: 20px;
+p {
+  font-size: 18px;          
+  color: #333;             
+  line-height: 1.7;         
+  margin: 16px 24px;        
+  padding: 8px 12px;        
+  background: #f7f7f7;      
+  border-radius: 8px;       
+  text-align: left;         
 }
 
 /* Header (Blue Box) */
