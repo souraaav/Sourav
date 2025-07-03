@@ -1,11 +1,14 @@
-
-  /* Reset and global box-sizing */
-html, body {
+/* Reset and global box-sizing */
+html {
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+}
+body {
   height: 100%;
   width: 100%;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 *, *::before, *::after {
   box-sizing: inherit;
@@ -34,8 +37,6 @@ body.dark-mode {
 /* Body Layout */
 body {
   min-height: 100vh;
-  margin: 0;
-  padding: 0;
   font-family: 'Segoe UI', Arial, sans-serif;
   font-size: 1rem;
   line-height: 1.6;
@@ -54,7 +55,7 @@ header {
   padding: 3em 0; /* Make header TALL and touch left/right */
   background: var(--header-bg);
   color: var(--header-text);
-  width: 100vw; /* Force edge-to-edge */
+  width: 100%; /* FIX: use 100% instead of 100vw */
   box-sizing: border-box;
   transition: background var(--transition), color var(--transition);
   box-shadow: 0 2px 8px rgba(0,0,0,0.02);
@@ -87,7 +88,7 @@ nav a:focus, #toggle-theme:focus, form button:focus {
 
 /* Blue line under header */
 .blue-line {
-  width: 100vw;
+  width: 100%; /* FIX: use 100% instead of 100vw */
   height: 4px;
   background: var(--primary);
   margin-bottom: 1em;
@@ -189,6 +190,9 @@ footer {
   }
   section {
     padding: 1em 0;
+  }
+  .blue-line {
+    margin-bottom: 0.5em; /* Optional: reduced margin for mobile */
   }
 }
 @media (max-width: 400px) {
