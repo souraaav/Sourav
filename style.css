@@ -44,12 +44,9 @@ body {
   color: var(--text);
   transition: background var(--transition), color var(--transition);
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
 }
-body {
-  padding-left: 20px;
-  padding-right: 20px;
-}
+
 
 /* Header (Blue Box) */
 header {
