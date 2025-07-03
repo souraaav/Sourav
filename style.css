@@ -46,12 +46,6 @@ body {
   display: flex;
   flex-direction: column;
 }
-#about p {
-  margin: 0 auto;
-  max-width: 600px;    /* limits line length and centers */
-  padding: 0 2em;      /* adds space on left and right */
-  text-align: center;  /* centers the text itself */
-}
 
 /* Header (Blue Box) */
 header {
