@@ -84,3 +84,15 @@ footer {
 .socials a {
   margin-right: 1em;
 }
+.socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+  margin: 2em 0;
+}
+.social-icon img {
+  width: 40px; /* Adjust icon size as needed */
+  height: 40px;
+  display: block;
+}
