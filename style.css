@@ -111,3 +111,9 @@ header {
   /* ... */
   padding: 1em 2em;
 }
+footer {
+  text-align: center;
+  padding: 1em 2em;
+  background: var(--primary);
+  color: white;
+}
