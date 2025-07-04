@@ -214,3 +214,6 @@ form button:hover {
     height: 32px;
   }
 }
+body.dark-mode .socials img {
+  filter: invert(1);
+}
