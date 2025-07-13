@@ -110,7 +110,6 @@ main {
   height: 110px;
   border-radius: 50%;
   object-fit: cover;
-  border: 3px solid var(--accent);
   transition: transform 0.4s ease;
 }
 
