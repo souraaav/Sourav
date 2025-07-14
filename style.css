@@ -122,9 +122,6 @@ h2 {
   margin: 20px 0 10px;
   color: var(--accent);
 }
-h5 {
-  font-weight: bold;
-}
 
 p {
   margin-bottom: 15px;
@@ -204,4 +201,7 @@ footer {
     flex-wrap: wrap;
     gap: 12px;
   }
+}
+h5 {
+  font-weight: bold;
 }
